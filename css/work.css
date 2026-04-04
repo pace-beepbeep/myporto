@@ -1,0 +1,224 @@
+/* ══════════════════════════════
+   SHARED PAGE STYLES
+   (imported by work / about / contact)
+══════════════════════════════ */
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding: 60px 40px 80px;
+  border-bottom: 1px solid var(--ink-faint);
+  animation: fadeUp 0.9s 0.2s both;
+}
+.page-eyebrow {
+  display: inline-block;
+  font-size: 7.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+.page-title {
+  font-family: var(--serif);
+  font-size: clamp(80px, 16vw, 180px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.85;
+  color: var(--ink);
+  user-select: none;
+}
+.page-title .outline-letter {
+  -webkit-text-stroke: 1.5px var(--ink);
+  color: transparent;
+}
+.page-title sup {
+  font-family: var(--mono);
+  font-size: clamp(11px, 1.5vw, 17px);
+  font-weight: 400;
+  vertical-align: super;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  -webkit-text-stroke: 0;
+  color: var(--ink);
+}
+.page-subtitle {
+  font-family: var(--serif2);
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(232,228,220,0.5);
+  font-weight: 300;
+  margin-top: 28px;
+  max-width: 520px;
+}
+
+/* ── SECTION LABEL (reuse from index) ── */
+.section-label {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--ink);
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+/* ══════════════════════════════
+   WORK PAGE
+══════════════════════════════ */
+
+/* Filter */
+.filter-bar {
+  display: flex;
+  gap: 4px;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--ink-faint);
+  animation: fadeUp 0.7s 0.35s both;
+}
+.filter-btn {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.4;
+  background: none;
+  border: 1px solid transparent;
+  padding: 7px 16px;
+  cursor: none;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.filter-btn:hover { opacity: 0.8; }
+.filter-btn.active {
+  opacity: 1;
+  border-color: var(--ink-faint);
+}
+
+/* Work page items — list layout */
+.work-page-grid {
+  padding: 0 40px 80px;
+}
+.wp-item {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--ink-faint);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
+  cursor: none;
+}
+.wp-item.visible { opacity: 1; transform: translateY(0); }
+.wp-item.hidden { display: none; }
+.wp-item:hover { border-color: rgba(232,228,220,0.3); }
+
+/* GitHub link wrapper */
+.wp-link {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* GitHub hint badge on thumb */
+.wp-github-hint {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 7px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: rgba(14,14,14,0.7);
+  padding: 4px 8px;
+  border: 1px solid var(--ink-faint);
+}
+.wp-item:hover .wp-github-hint { opacity: 1; }
+
+.wp-thumb {
+  position: relative;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-right: 1px solid var(--ink-faint);
+  transition: filter 0.4s;
+}
+.wp-item:hover .wp-thumb { filter: brightness(1.15); }
+.wp-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255,255,255,0.12);
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+}
+.wp-item:hover .wp-label { color: rgba(255,255,255,0.22); }
+.wp-hover-line {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--ink);
+  transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.wp-item:hover .wp-hover-line { width: 100%; }
+
+.wp-info {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.wp-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.wp-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.wp-year {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  opacity: 0.35;
+}
+.wp-desc {
+  font-family: var(--serif2);
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(232,228,220,0.55);
+  font-weight: 300;
+  max-width: 480px;
+}
+.wp-tag {
+  display: inline-block;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  border: 1px solid var(--ink-faint);
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .filter-bar { padding: 16px 20px; flex-wrap: wrap; }
+  .work-page-grid { padding: 0 20px 60px; }
+  .wp-item { grid-template-columns: 1fr; }
+  .wp-thumb { aspect-ratio: 16/9; border-right: none; border-bottom: 1px solid var(--ink-faint); }
+  .wp-info { padding: 24px 0 32px; }
+}

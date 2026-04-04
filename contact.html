@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello — Ray · Visual Designer</title>
+    <meta
+      name="description"
+      content="Get in touch with Ray — junior graphic designer and programmer. Start a project or just say hello."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor"></div>
+
+    <!-- ══ NAV ══ -->
+    <nav>
+      <div class="nav-group">
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="contact.html">Hello</a>
+      </div>
+      <a class="nav-center" href="index.html">✳</a>
+      <div class="nav-group">
+        <a
+          class="nav-link"
+          href="https://www.instagram.com/meofcrayy/"
+          target="_blank"
+          rel="noopener"
+          >Insta</a
+        >
+        <a
+          class="nav-link"
+          href="https://github.com/pace-beepbeep"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+      </div>
+    </nav>
+
+    <!-- ══ CONTACT HERO ══ -->
+    <header class="ct-hero">
+      <span class="page-eyebrow">Get in touch</span>
+      <h1 class="ct-title">Let's make<br /><em>something real.</em></h1>
+      <a class="ct-email" href="mailto:rayhanspasialvin@gmail.com">hello ray</a>
+    </header>
+
+    <!-- ══ CONTACT BODY ══ -->
+    <div class="ct-body">
+      <!-- Form -->
+      <div class="ct-form-wrap">
+        <p class="ct-form-label">Send a message</p>
+        <form class="ct-form" id="contactForm" novalidate>
+          <div class="ct-field">
+            <label for="ct-name">Name</label>
+            <input
+              id="ct-name"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              autocomplete="name"
+            />
+          </div>
+          <div class="ct-field">
+            <label for="ct-email">Email</label>
+            <input
+              id="ct-email"
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+            />
+          </div>
+          <div class="ct-field">
+            <label for="ct-project">Project type</label>
+            <select id="ct-project" name="project">
+              <option value="" disabled selected>Select a service</option>
+              <option value="brand">Brand Identity</option>
+              <option value="editorial">Editorial Design</option>
+              <option value="web">Web Experience</option>
+              <option value="motion">Motion &amp; Film</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="ct-field ct-field--full">
+            <label for="ct-message">Message</label>
+            <textarea
+              id="ct-message"
+              name="message"
+              rows="5"
+              placeholder="Tell me about your project…"
+            ></textarea>
+          </div>
+          <button class="ct-submit" type="submit" id="ct-submit-btn">
+            <span class="ct-submit-text">Send message</span>
+            <span class="ct-submit-arrow">→</span>
+          </button>
+        </form>
+        <div class="ct-success" id="ct-success" aria-live="polite">
+          <span class="ct-success-icon">✓</span>
+          <p>Message received — I'll be in touch soon.</p>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="ct-info">
+        <div class="ct-info-block">
+          <p class="ct-info-label">Location</p>
+          <p class="ct-info-value">Mojokerto, East Java<br />Indonesia</p>
+        </div>
+        <div class="ct-info-block">
+          <p class="ct-info-label">Availability</p>
+          <p class="ct-info-value">
+            Open to freelance<br />&amp; collaborations
+          </p>
+          <span class="ct-available-dot"></span>
+        </div>
+        <div class="ct-info-block">
+          <p class="ct-info-label">Response time</p>
+          <p class="ct-info-value">Within 24–48 hours</p>
+        </div>
+        <div class="ct-socials">
+          <p class="ct-info-label">Find me at</p>
+          <div class="ct-social-links">
+            <a
+              href="https://www.instagram.com/meofcrayy/"
+              class="ct-social-link"
+              target="_blank"
+              rel="noopener"
+              >Instagram ↗</a
+            >
+            <a
+              href="https://github.com/pace-beepbeep"
+              class="ct-social-link"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <span>© Ray 2024</span>
+      <span>Junior Graphic Designer &amp; Programmer</span>
+      <span>Mojokerto</span>
+    </footer>
+
+    <script src="script/pages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Ray · Visual Designer</title>
+    <meta
+      name="description"
+      content="Ray is a junior graphic designer and programmer based in Mojokerto, Indonesia, fascinated by typography, space, and meaning."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor"></div>
+
+    <!-- ══ NAV ══ -->
+    <nav>
+      <div class="nav-group">
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Hello</a>
+      </div>
+      <a class="nav-center" href="index.html">✳</a>
+      <div class="nav-group">
+        <a
+          class="nav-link"
+          href="https://www.instagram.com/meofcrayy/"
+          target="_blank"
+          rel="noopener"
+          >Insta</a
+        >
+        <a
+          class="nav-link"
+          href="https://github.com/pace-beepbeep"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+      </div>
+    </nav>
+
+    <!-- ══ INTRO ══ -->
+    <header class="ab-intro">
+      <div class="ab-intro-left">
+        <span class="page-eyebrow">About</span>
+        <h1 class="ab-title">Craft,<br /><em>intention,</em><br />clarity.</h1>
+      </div>
+      <div class="ab-intro-right">
+        <div class="ab-portrait">
+          <div class="ab-portrait-inner">
+            <img
+              class="ab-portrait-photo"
+              src="images/myphoto.jpeg"
+              alt="Ray — Junior Graphic Designer & Programmer"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.classList.add('ab-portrait-fallback');
+              "
+            />
+          </div>
+          <div class="ab-portrait-caption">Mojokerto, Indonesia · 2026</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ BIO ══ -->
+    <section class="ab-bio">
+      <div class="ab-bio-inner">
+        <p class="ab-statement">
+          Ray is a Graphic designer and programmer with a deep interest in the
+          intersection of typography, space, and meaning. Every project is
+          approached as a quiet conversation between form and function — where
+          restraint speaks louder than decoration.
+        </p>
+        <p class="ab-statement ab-statement--secondary">
+          Currently based in Mojokerto, Indonesia, working across brand
+          identity, editorial, web experience, and motion — always hunting for
+          that precise moment when design disappears and only purpose remains.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES ══ -->
+    <section class="ab-services">
+      <p class="section-label">Services</p>
+      <ul class="ab-service-list">
+        <li class="ab-service-item">
+          <span class="ab-service-num">01</span>
+          <div class="ab-service-body">
+            <h2 class="ab-service-title">Editorial Design</h2>
+            <p class="ab-service-desc">
+              Print and digital publications — grids, hierarchies, and narrative
+              flow.
+            </p>
+          </div>
+        </li>
+        <li class="ab-service-item">
+          <span class="ab-service-num">02</span>
+          <div class="ab-service-body">
+            <h2 class="ab-service-title">Web Experience</h2>
+            <p class="ab-service-desc">
+              Front-end development, UI design, and interaction-focused digital
+              products.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ══ STACK ══ -->
+    <section class="ab-stack">
+      <p class="section-label">Tools &amp; Stack</p>
+      <div class="ab-stack-grid">
+        <div class="ab-stack-item">
+          <span class="ab-stack-name">Figma</span>
+          <span class="ab-stack-cat">Design</span>
+        </div>
+        <div class="ab-stack-item">
+          <span class="ab-stack-name">Adobe Photoshop</span>
+          <span class="ab-stack-cat">Design</span>
+        </div>
+        <div class="ab-stack-item">
+          <span class="ab-stack-name">HTML / CSS</span>
+          <span class="ab-stack-cat">Web</span>
+        </div>
+        <div class="ab-stack-item">
+          <span class="ab-stack-name">JavaScript</span>
+          <span class="ab-stack-cat">Web</span>
+        </div>
+        <div class="ab-stack-item">
+          <span class="ab-stack-name">Python</span>
+          <span class="ab-stack-cat">Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA ══ -->
+    <section class="ab-cta">
+      <p class="ab-cta-label">Ready to work together?</p>
+      <a class="ab-cta-link" href="contact.html"
+        >Let's start a conversation →</a
+      >
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <span>© Ray 2024</span>
+      <span>Junior Graphic Designer &amp; Programmer</span>
+      <span>Mojokerto</span>
+    </footer>
+
+    <script src="script/pages.js"></script>
+  </body>
+</html>
